@@ -1,8 +1,8 @@
 print('Введите число от 3 до 20 ')
 numbers = int(input())
-list_ = []
+result = []
 for i in range(1, 20):
-    if numbers <= 0 or numbers <= 2:
+    if numbers <= 2:
         print('Это число не используется')
         break
     for j in range(1, 20):
@@ -11,5 +11,5 @@ for i in range(1, 20):
         else:
             kratno = numbers % (i + j)
             if kratno == 0:
-                list_.append([i, j])
-print('Пары чисел ', *list_)
+                result.append(i), result.append(j)
+print(f'Для числа {numbers} пароль: ', ''.join(map(str, result)))
